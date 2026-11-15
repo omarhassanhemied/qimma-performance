@@ -26,7 +26,7 @@ window.SITE_CONFIG = {
   email: "mwsshqmhalada@gmail.com",
   showEmail: false,
   // Tracking: leave empty to disable. No fake IDs are inserted.
-  tracking: { gtmId: "", ga4Id: "", metaPixelId: "", tiktokPixelId: "" },
+  tracking: { gtmId: "GTM-P7WHNMLP", ga4Id: "", metaPixelId: "", tiktokPixelId: "" },
   // Pre-filled WhatsApp messages (always Arabic)
   whatsappMessages: {
     general: "السلام عليكم، أرغب في الاستفسار عن خدماتكم.",
