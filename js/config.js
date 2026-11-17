@@ -14,6 +14,16 @@ window.SITE_CONFIG = {
     ar: "طريق الأمير محمد بن عبدالرحمن - حي اليمامة - الرياض",
     en: "Prince Mohammed bin Abdulrahman Road - Al Yamamah District - Riyadh"
   },
+  // Dammam location. Add the street/district once confirmed, e.g. "شارع ... - حي ... - الدمام".
+  dammam: {
+    ar: "الدمام - المنطقة الشرقية",
+    en: "Dammam - Eastern Province",
+    mapsLink: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("مؤسسة قمة الأداء للصيانة الدمام")
+  },
+  // REAL customer reviews only. Add one object per review, with the customer's consent:
+  // { name: "اسم العميل", city: "الدمام", text: "نص الرأي", stars: 5 }
+  // While this list is empty the page shows neutral placeholders.
+  reviews: [],
   // Opens a Google Maps SEARCH for the address (not a pinned location).
   // Replace with a verified Google Maps share link / embed URL once the exact pin is confirmed.
   mapsLink: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("طريق الأمير محمد بن عبدالرحمن حي اليمامة الرياض"),

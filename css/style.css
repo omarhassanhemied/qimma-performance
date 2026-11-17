@@ -324,3 +324,6 @@ html[lang=en] .proc h3{font-weight:700;font-size:1.55rem}
 .brand__txt b,.brand__txt small{white-space:nowrap}
 html[lang=en] .brand__txt b{font-size:1.15rem}
 @media (min-width:960px) and (max-width:1279px){ .nav a{padding:8px 9px;font-size:.86rem} .hdr__tools .btn--ghost{display:none!important} }
+.rev--real{border-style:solid;text-align:start}
+.rev__stars{color:var(--gold);letter-spacing:3px;font-size:1.1rem;margin-bottom:8px}
+.rev__text{color:var(--ink,#222);font-size:1rem;margin-bottom:10px}

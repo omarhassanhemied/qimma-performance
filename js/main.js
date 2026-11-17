@@ -81,6 +81,20 @@
     });
     h.setAttribute('aria-label', words.join(' '));
   }
+  function renderReviews(lang) {
+    var box = document.getElementById('revs'); var list = C.reviews || [];
+    if (!box || !list.length) return;
+    box.innerHTML = '';
+    list.forEach(function (r) {
+      var d = document.createElement('div'); d.className = 'rev rev--real is-in';
+      var st = document.createElement('div'); st.className = 'rev__stars';
+      st.textContent = new Array((r.stars || 5) + 1).join('\u2605'); st.setAttribute('aria-label', (r.stars || 5) + '/5');
+      var p = document.createElement('p'); p.className = 'rev__text'; p.textContent = r.text;
+      var n = document.createElement('h3'); n.textContent = r.name + (r.city ? ' - ' + r.city : '');
+      d.appendChild(st); d.appendChild(p); d.appendChild(n); box.appendChild(d);
+    });
+    var lead = document.querySelector('[data-i18n="rev.lead"]'); if (lead) lead.removeAttribute('data-i18n'), lead.textContent = lang === 'en' ? 'What our customers say about our work.' : 'ما يقوله عملاؤنا عن أعمالنا.';
+  }
   function setLang(l, first) {
     lang = l === 'en' ? 'en' : 'ar';
     var d = T[lang];
@@ -89,6 +103,8 @@
     $$('[data-i18n-aria]').forEach(function (el) { var v = d[el.getAttribute('data-i18n-aria')]; if (v != null) el.setAttribute('aria-label', v); });
     $$('[data-i18n-ph]').forEach(function (el) { var v = d[el.getAttribute('data-i18n-ph')]; if (v != null) el.setAttribute('placeholder', v); });
     $$('[data-i18n-alt]').forEach(function (el) { var v = d[el.getAttribute('data-i18n-alt')]; if (v != null) el.setAttribute('alt', v + (el.closest('.svc,.about__media') ? '' : '')); });
+    $$('[data-dammam]').forEach(function (el) { el.textContent = C.dammam[lang]; el.href = C.dammam.mapsLink; });
+    renderReviews(lang);
     $$('[data-address]').forEach(function (el) { el.textContent = C.address[lang]; });
     $$('[data-brand-name]').forEach(function (el) { el.textContent = lang === 'ar' ? C.nameAr : C.nameEn; });
     document.title = d['meta.title'];
