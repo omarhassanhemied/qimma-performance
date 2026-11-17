@@ -103,7 +103,6 @@
     $$('[data-i18n-aria]').forEach(function (el) { var v = d[el.getAttribute('data-i18n-aria')]; if (v != null) el.setAttribute('aria-label', v); });
     $$('[data-i18n-ph]').forEach(function (el) { var v = d[el.getAttribute('data-i18n-ph')]; if (v != null) el.setAttribute('placeholder', v); });
     $$('[data-i18n-alt]').forEach(function (el) { var v = d[el.getAttribute('data-i18n-alt')]; if (v != null) el.setAttribute('alt', v + (el.closest('.svc,.about__media') ? '' : '')); });
-    $$('[data-dammam]').forEach(function (el) { el.textContent = C.dammam[lang]; el.href = C.dammam.mapsLink; });
     renderReviews(lang);
     $$('[data-address]').forEach(function (el) { el.textContent = C.address[lang]; });
     $$('[data-brand-name]').forEach(function (el) { el.textContent = lang === 'ar' ? C.nameAr : C.nameEn; });
