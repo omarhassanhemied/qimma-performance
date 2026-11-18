@@ -13,7 +13,7 @@
     try {
       window.dataLayer.push(Object.assign({ event: name }, params || {}));
       if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
-      if (typeof window.fbq === 'function') window.fbq('trackCustom', name, params || {});
+      if (typeof window.fbq === 'function') { if (name === 'language_switch') window.fbq('trackCustom', name, params || {}); else window.fbq('track', name === 'form_whatsapp_submit' ? 'Lead' : 'Contact', params || {}); } /* standard Meta events so campaigns can optimize on them */
       if (window.ttq && typeof window.ttq.track === 'function') window.ttq.track('Contact', params || {});
     } catch (e) { /* never break the page because of a tracker */ }
   }
