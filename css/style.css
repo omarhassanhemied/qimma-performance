@@ -327,3 +327,5 @@ html[lang=en] .brand__txt b{font-size:1.15rem}
 .rev--real{border-style:solid;text-align:start}
 .rev__stars{color:var(--gold);letter-spacing:3px;font-size:1.1rem;margin-bottom:8px}
 .rev__text{color:var(--ink,#222);font-size:1rem;margin-bottom:10px}
+.rev--demo{position:relative;border-style:dashed;text-align:start;opacity:.92}
+.rev--demo .rev__badge{position:absolute;inset-block-start:12px;inset-inline-end:12px;background:var(--gold);color:#fff;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:99px}
