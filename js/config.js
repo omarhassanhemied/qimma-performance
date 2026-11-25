@@ -11,11 +11,11 @@ window.SITE_CONFIG = {
   ],
   primaryPhone: 0,                         // index used by the header, floating buttons and the contact form
   address: {
-    ar: "الدمام - المنطقة الشرقية",
-    en: "Dammam - Eastern Province"
+    ar: "الرياض - منطقة الرياض",
+    en: "Riyadh - Riyadh Region"
   },
   // REAL customer reviews only. Add one object per review, with the customer's consent:
-  // { name: "اسم العميل", city: "الدمام", text: "نص الرأي", stars: 5 }
+  // { name: "اسم العميل", city: "الرياض", text: "نص الرأي", stars: 5 }
   // While this list is empty the page shows neutral placeholders.
   reviews: [],
   mapEmbedUrl: "",                         // optional: verified Google Maps embed URL (leave empty until verified)
